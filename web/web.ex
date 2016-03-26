@@ -1,12 +1,12 @@
-defmodule PhoenixBase.Web do
+defmodule HelloPhoenix.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use PhoenixBase.Web, :controller
-      use PhoenixBase.Web, :view
+      use HelloPhoenix.Web, :controller
+      use HelloPhoenix.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -18,9 +18,8 @@ defmodule PhoenixBase.Web do
 
   def model do
     quote do
-      use Ecto.Schema
+      use Ecto.Model
 
-      import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
     end
@@ -30,12 +29,11 @@ defmodule PhoenixBase.Web do
     quote do
       use Phoenix.Controller
 
-      alias PhoenixBase.Repo
-      import Ecto
+      alias HelloPhoenix.Repo
+      import Ecto.Model
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import PhoenixBase.Router.Helpers
-      import PhoenixBase.Gettext
+      import HelloPhoenix.Router.Helpers
     end
   end
 
@@ -49,9 +47,7 @@ defmodule PhoenixBase.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import PhoenixBase.Router.Helpers
-      import PhoenixBase.ErrorHelpers
-      import PhoenixBase.Gettext
+      import HelloPhoenix.Router.Helpers
     end
   end
 
@@ -65,10 +61,9 @@ defmodule PhoenixBase.Web do
     quote do
       use Phoenix.Channel
 
-      alias PhoenixBase.Repo
-      import Ecto
+      alias HelloPhoenix.Repo
+      import Ecto.Model
       import Ecto.Query, only: [from: 1, from: 2]
-      import PhoenixBase.Gettext
     end
   end
 

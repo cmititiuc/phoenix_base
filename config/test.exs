@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :phoenix_base, PhoenixBase.Endpoint,
+config :hello_phoenix, HelloPhoenix.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,9 @@ config :phoenix_base, PhoenixBase.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :phoenix_base, PhoenixBase.Repo,
+config :hello_phoenix, HelloPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "phoenix_base_test",
+  username: "hello_phoenix",
+  database: "hello_phoenix_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

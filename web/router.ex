@@ -1,5 +1,5 @@
-defmodule PhoenixBase.Router do
-  use PhoenixBase.Web, :router
+defmodule HelloPhoenix.Router do
+  use HelloPhoenix.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule PhoenixBase.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhoenixBase do
+  scope "/", HelloPhoenix do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixBase do
+  # scope "/api", HelloPhoenix do
   #   pipe_through :api
   # end
 end
