@@ -33,7 +33,7 @@ defmodule PhoenixBase.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_phoenix_base_key",
-    signing_salt: "e+bZkGim"
+    signing_salt: "OhkgUwtG"
 
   plug PhoenixBase.Router
 end
