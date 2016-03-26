@@ -1,3 +1,3 @@
-defmodule PhoenixBase.LayoutViewTest do
-  use PhoenixBase.ConnCase, async: true
+defmodule HelloPhoenix.LayoutViewTest do
+  use HelloPhoenix.ConnCase, async: true
 end

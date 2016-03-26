@@ -1,3 +1,3 @@
-defmodule PhoenixBase.PageView do
-  use PhoenixBase.Web, :view
+defmodule HelloPhoenix.PageView do
+  use HelloPhoenix.Web, :view
 end
